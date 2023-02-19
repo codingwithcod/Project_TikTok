@@ -15,7 +15,7 @@ import { topics } from '../utils/constants';
 
 
 
-const upload = () => {
+const Upload = () => {
 
     
 
