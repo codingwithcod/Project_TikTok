@@ -16,6 +16,7 @@ const Navbar = () => {
   const [searchValue, setSearchValue] = useState('')
 
   const {userProfile, addUser, removeUser} = useAuthStore();
+  console.log("👉 ~ file: Navbar.tsx:19 ~ Navbar ~ userProfile", userProfile)
 
   const router = useRouter();
 
@@ -71,7 +72,7 @@ const Navbar = () => {
               </button>
             </Link>
             {userProfile.image && (
-              <Link href='/'>
+              <Link href={`/profile/${userProfile._id}`}>
               <>
               <Image 
               width={40}
