@@ -199,4 +199,4 @@ const Upload = () => {
   );
 };
 
-export default upload;
+export default Upload;
