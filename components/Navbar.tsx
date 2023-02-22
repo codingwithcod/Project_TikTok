@@ -16,7 +16,6 @@ const Navbar = () => {
   const [searchValue, setSearchValue] = useState('')
 
   const {userProfile, addUser, removeUser} = useAuthStore();
-  console.log("👉 ~ file: Navbar.tsx:19 ~ Navbar ~ userProfile", userProfile)
 
   const router = useRouter();
 
