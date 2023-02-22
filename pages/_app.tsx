@@ -10,7 +10,7 @@ import Head from "next/head";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isSSR, setIsSSr] = useState(true);
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   useEffect(() => {
     setIsSSr(false);
