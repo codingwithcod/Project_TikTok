@@ -19,8 +19,8 @@ const SuggestedAccounts = () => {
 
 
     return (
-    <div className='xl:border-b-2 border-gray-200 pb-4'>
-      <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'>Suggested Account </p>
+    <div className='md:border-b-2 border-gray-200  pb-4 pl-2'>
+      <p className='text-gray-500 font-semibold m-3 mt-4 hidden md:block'>Suggested Account </p>
       <div>
         {allUsers.slice(0,6).map((user:IUser) => (
           <Link href={`/profile/${user._id}`} key={user._id}>
@@ -34,7 +34,7 @@ const SuggestedAccounts = () => {
                   className='rounded-full'
                 />
               </div>
-              <div className='hidden xl:block'>
+              <div className='hidden md:block'>
                 <p  className='flex gap-1 items-center text-md font-bold text-primary lowercase'>
                   {user.userName.replaceAll(' ', '')}
                   <GoVerified className='text-blue-400' />

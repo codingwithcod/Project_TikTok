@@ -11,12 +11,13 @@ import Footer from './Footer';
 
 
 
-const Sidebar = () => {
+const Sidebar = ({showSidebar}:any) => {
 
-    const [showSidebar, setShowSidebar] = useState(true);
+    const router = useRouter()
+    const homePage = router.query;
+    
 
-
-    const activeLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded';
+    const activeLink = 'flex items-center gap-3 hover:bg-primary p-3 pl-1 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded';
 
     const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded';
 
@@ -24,25 +25,18 @@ const Sidebar = () => {
 
 
   return (
-    <div>
-        <div
-        onClick={() => setShowSidebar((prev) => !prev)}
-        className='block xl:hidden m-2 ml-4 mt-3 text-xl'
-        >
-            {
-                showSidebar ? <ImCancelCircle/> : <AiOutlineMenu/>
-            }
-        </div>
+    <div className=''>
+       
         {
             showSidebar && (
-                <div className='xl:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 border-gray-100 xl:border-0 p-3 '>
-                    <div className='xl:border-b-2 border-gray-200 xl:pb-4'>
+                <div className='md:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 bg-gray-50 md:border-0  '>
+                    <div className='md:border-b-2   md:pb-4'>
                         <Link href='/'>
-                        <div className={activeLink}>
+                        <div className={  activeLink}>
                             <p className="text-2xl">
                                 <AiFillHome/>
                             </p>
-                            <span className='capitalize text-xl hidden xl:block'>
+                            <span className='capitalize text-xl hidden md:block'>
                                 For You
                             </span>
 

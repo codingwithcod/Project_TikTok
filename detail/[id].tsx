@@ -8,10 +8,10 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { HiVolumeUp, HiVolumeOff } from "react-icons/hi";
 
 // import Comments from '../../components/Comments';
-import { BASE_URL } from "../../utils";
+import { BASE_URL } from "../utils";
 // import LikeButton from '../../components/LikeButton';
-import useAuthStore from "../../store/authStore";
-import { Video } from "../../types";
+import useAuthStore from "../store/authStore";
+import { Video } from "../types";
 import axios from "axios";
 import LikeButton from "@/components/LikeButton";
 import Comments from "@/components/Comments";

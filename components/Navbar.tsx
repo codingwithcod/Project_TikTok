@@ -7,11 +7,13 @@ import { AiOutlineLogout } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { IoMdAdd } from "react-icons/io";
 import Logo from "../utils/tiktik-logo.png";
+import {ImCancelCircle} from 'react-icons/im'
+import { AiOutlineMenu} from 'react-icons/ai'
 
 import { createOrGetUser } from "@/utils";
 import useAuthStore from "@/store/authStore";
 
-const Navbar = () => {
+  const Navbar = ({showSidebar, setShowSidebar} :any) => {
 
   const [searchValue, setSearchValue] = useState('')
 
@@ -30,6 +32,17 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4">
+
+      <div
+        onClick={() => setShowSidebar((prev :any) => !prev)}
+        className='block md:hidden   text-2xl'
+        >
+            {
+                showSidebar ? <ImCancelCircle/> : <AiOutlineMenu/>
+            }
+        </div>
+
+
       <Link href='/' >
         <div className="w-[100px] md:w-[130px] ">
           <Image 
@@ -83,16 +96,7 @@ const Navbar = () => {
               </>
               </Link>
             )}
-            <button
-            type='button'
-            onClick={() => {
-              googleLogout();
-               removeUser() }}
-            className="px-2"
-            >
-
-              <AiOutlineLogout color="red" fontSize={21} />
-            </button>
+         
 
           </div>
         ): (

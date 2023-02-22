@@ -8,10 +8,6 @@ export const topics = [
     icon: <BsCode />,
   },
   {
-    name: 'comedy',
-    icon: <BsEmojiSunglasses />,
-  },
-  {
     name: 'gaming',
     icon: <FaGamepad />,
   },
@@ -20,16 +16,8 @@ export const topics = [
     icon: <GiCakeSlice />,
   },
   {
-    name: 'dance',
-    icon: <GiGalaxy />,
-  },
-  {
     name: 'beauty',
     icon: <GiLipstick />,
-  },
-  {
-    name: 'animals',
-    icon: <FaPaw />,
   },
   {
     name: 'sports',

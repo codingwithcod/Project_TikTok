@@ -30,7 +30,6 @@ const VideoCard: NextPage<IProps> = ({ postDetail }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const [post, setPost] = useState(postDetail);
-  console.log("👉 ~ file: VideoCard.tsx:31 ~ post:", post)
 
   const [isHover, setIsHover] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
