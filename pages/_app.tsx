@@ -10,10 +10,17 @@ import Head from "next/head";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isSSR, setIsSSr] = useState(true);
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
+
 
   useEffect(() => {
-    setIsSSr(false);
+    setIsSSr(false); 
+    const screenSize = window.screen.width
+    if(screenSize < 768){
+      setShowSidebar(false)
+    }
+    
+    
   }, []);
 
   if (isSSR) return null;

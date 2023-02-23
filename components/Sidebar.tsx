@@ -29,7 +29,7 @@ const Sidebar = ({showSidebar}:any) => {
        
         {
             showSidebar && (
-                <div className='md:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 bg-gray-50 md:border-0  '>
+                <div className='md:w-400 w-20 flex flex-col overflow-y-auto justify-start mb-10 border-r-2 bg-gray-50 md:border-0  '>
                     <div className='md:border-b-2   md:pb-4'>
                         <Link href='/'>
                         <div className={  activeLink}>

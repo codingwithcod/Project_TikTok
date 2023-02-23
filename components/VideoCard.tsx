@@ -173,7 +173,7 @@ const VideoCard: NextPage<IProps> = ({ postDetail }) => {
         <div className=" flex  justify-evenly items-center ">
             {userProfile ? (
               <LikeButton
-              likes={post.likes}
+              likes={post?.likes}
               handleLike={() => handleLike(true)}
               handleDisLike={() => handleLike(false)}
               />
@@ -186,7 +186,7 @@ const VideoCard: NextPage<IProps> = ({ postDetail }) => {
 
               </div>
               <span className="text-md font-semibold">
-               {post.likes.length | 0}
+               {post?.likes?.length | 0}
               </span>
 
               </div>
@@ -200,7 +200,7 @@ const VideoCard: NextPage<IProps> = ({ postDetail }) => {
 
               </div>
               <span className="text-md font-semibold">
-               {post.comments.length | 0}
+               {post?.comments?.length || 0}
               </span>
 
               </div>
@@ -211,7 +211,7 @@ const VideoCard: NextPage<IProps> = ({ postDetail }) => {
           comment={comment}
           setComment={setComment}
           addComment={addComment}
-          comments={post.comments}
+          comments={post?.comments}
           isPostingComment={isPostingComment}
         />
 
